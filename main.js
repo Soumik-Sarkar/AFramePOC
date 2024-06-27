@@ -21,4 +21,16 @@ window.onload = function () {
         var cube = document.getElementById("cube");
         cube.setAttribute("material", "color", "#4CC3D9");
       });
+      document
+      .getElementById("rotateButton")
+      .addEventListener("click", function () {
+        var cube = document.getElementById("cube");
+        cube.setAttribute('animation', {
+          property: 'rotation',
+          to: '0 360 0',
+          dur: '2000', // Animation duration in milliseconds
+          loop: true,
+          easing: 'linear'
+        });
+      });
   };
